@@ -1,0 +1,165 @@
+h2 span{font-family: 'Playfair Display SC', serif;}
+h2{font-family: 'Playfair Display SC', serif;}
+
+#logo img {
+    width: 130px;
+    height: auto;
+}
+
+#productos-section{
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    padding: 50px;
+    position: relative;
+}
+
+#main-container .bg-productos{
+    background-image: url(productos.jpg) !important;
+}
+#main-container .bg-coca{
+    background-image: url(img/coca.jpg) !important;
+}
+#main-container .bg-menta{
+    background-image: url(img/menta.jpg) !important;
+}
+#main-container .bg-maracuya{
+    background-image: url(img/maracuya.jpg) !important;
+}
+
+#main-container #menu-productos{
+    text-align: left;
+}
+
+#main-container #menu-productos ul{
+    margin: 0;
+    padding: 0;
+}
+
+#main-container #menu-productos ul li{
+    display: block;
+    text-align: left;
+    margin-left: 200px;
+}
+
+#main-container #menu-productos a{
+    color: white;
+    text-decoration: none;
+}
+
+#main-container #menu-productos h2{
+    font-size: 40px;
+}
+
+#main-container #menu-productos h2 span::after{
+    background-color: #fff;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    left: 243px;
+    margin-top: 60px;
+    transition: all 0.3s;
+}
+
+#main-container #menu-productos h2:hover span::after{
+    width: 310px;
+}
+
+#main-container .productos-titulo h1{
+    color: white;
+    font-size: 10em;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+/* Secciones de contenido: Se quitó el background-color rojo */
+#main-container .productos-content section{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    position: relative; /* Fundamental para que el texto se ubique dentro */
+}
+
+/* Corrección de rutas de imágenes de coca (sin el punto inicial) */
+#main-container .productos-content #coca01-content{ background-image: url(img/coca01.jpg); }
+#main-container .productos-content #coca02-content{ background-image: url(img/coca02.jpg); }
+#main-container .productos-content #coca03-content{ background-image: url(img/coca03.jpg); }
+
+#main-container .productos-content #menta01-content{ background-image: url(img/menta01.jpg); }
+#main-container .productos-content #menta02-content{ background-image: url(img/menta02.jpg); }
+#main-container .productos-content #menta03-content{ background-image: url(img/menta03.jpg); }
+
+#main-container .productos-content #maracuya01-content{ background-image: url(img/maracuya01.jpg); }
+#main-container .productos-content #maracuya02-content{ background-image: url(img/maracuya02.jpg); }
+#main-container .productos-content #maracuya03-content{ background-image: url(img/maracuya03.jpg); }
+
+/* Caja de descripción adaptada para ubicarse a la derecha */
+#main-container .productos-content .description{
+    font-size: 1.5em;
+    color: white;
+    width: 550px; /* Ancho más compacto para que no tape el vaso */
+    position: absolute; /* Permite moverlo libremente */
+    top: 32%; /* Ajusta la altura vertical */
+    transition: all 1s;
+}
+
+/* Estilos de los textos internos */
+#main-container .productos-content .description h2{
+    font-size: 5em;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+#main-container .productos-content .description h3{
+    font-size: 2.5em;
+    margin: 0 0 20px 0;
+}
+
+#main-container .productos-content .description p{
+    font-size: 1.2em;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Alineaciones corregidas (se prioriza la derecha) */
+.aling-left, .align-left {
+    opacity: 0;
+    left: 10% !important;
+    right: auto !important;
+}
+
+.aling-center, .align-center {
+    opacity: 0;
+    left: 50% !important;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* FUERZA que align-right funcione y mueva el texto a la derecha */
+.aling-rigth, .align-right {
+    opacity: 1; /* Cambia a 0 si usas efecto hover, a 1 para que se vea siempre */
+    right: 8% !important; /* ¡LO PEGA A LA DERECHA! */
+    left: auto !important;
+    text-align: left;
+}
+
+.aling-rigth h2, .align-right h2 {
+    font-size: 5em !important;
+}
+
+/* Efectos hover (simplificados para funcionar con ambas clases) */
+#main-container .productos-content section:hover .aling-left,
+#main-container .productos-content section:hover .align-left,
+#main-container .productos-content section:hover .aling-rigth,
+#main-container .productos-content section:hover .align-right,
+#main-container .productos-content section:hover .aling-center,
+#main-container .productos-content section:hover .align-center {
+    opacity: 1;
+}
